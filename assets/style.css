@@ -1,0 +1,572 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    letter-spacing: .4px;
+}
+:root{
+    --color-primary: #676CDB;
+    --color-white: #FFFFFF;
+    --color-light: rgba(255, 255, 255, 0.5);
+    --color-black: #000000;
+    --color-bg1: rgba(34, 42, 54, 0.95);
+    --color-bg2: #1d242e;   
+
+    --transition: .4s ease;     
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    position: relative;
+    width: 100%;
+    background: var(--color-bg1);
+}
+.heading{
+    font-family: 'Times New Roman', Times, serif !important;
+}
+h1{
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--color-white);
+}
+h2{
+    font-size: 50px;
+    line-height: 120%;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    font-size: 40px;
+    line-height: 160%;
+    font-weight: 700;
+    color: var(--color-white);
+}
+h4{
+    font-size: 30px;
+    line-height: 120%;
+    font-weight: 700;
+    color: var(--color-white);
+}
+h5{
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 700;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.btn{
+    padding: 20px 40px;
+    display: inline-block;
+    color: var(--color-white);
+    line-height: 120%;
+    font-size: 17px;
+    width: fit-content;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-primary);
+    transition: var(--transition)
+}
+.btn-primary{
+    background: var(--color-primary);
+}
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+    width: 90%;
+}
+header{    
+    height: max-content;
+    position: relative;
+    width: 100%;       
+}
+/* ...................Start NavBar.................... */
+
+nav{
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;   
+    z-index: 9;
+}
+.navScroll{
+    background: var(--color-primary);
+    box-shadow: 0  0 1rem 0  rgba(0, 0, 0, 0.4) ;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container h3{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;   
+}
+.nav-link{
+    display: flex;
+    gap: 40px;
+}
+.nav-link li a{
+    color: var(--color-white);
+    font-size: 17px;
+    transition: var(--transition);
+}
+.nav-link li a:hover{
+    color: var(--color-light);
+}
+.nav-container .btn{
+    padding: 16px 32px;    
+}
+.phone-menu {
+    display: none;
+}
+/* ...................End NavBar.................... */
+
+
+/* ...................Start Hero Section.................... */
+#Home{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; 
+    position: relative;    
+}
+
+.hero-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100% ;    
+}
+.hero-right img{
+    height: 100%;
+    object-fit: cover;  
+}
+.hero-left h1{
+    z-index: 2 ;
+    position: relative;
+    padding-top: 185px;
+}
+.hero-left P{
+    font-size: 17px;
+    color: var(--color-light);
+    line-height: 160%;
+    font-weight: 400;  
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+.hero-left P span{
+    color: var(--color-white);
+}
+.hero-action-aria{
+    display: flex;
+    gap: 10px;
+}
+.hero-action-aria a:nth-child(2){
+    text-decoration: underline;
+}
+/* ...................End Hero Section.................... */
+
+
+/* ...................Start Brand Section.................... */
+#Brand{
+    width: 100%;
+    background: var(--color-black);
+    padding: 20px 0;
+    display: grid;
+    place-items: center;
+}
+.brand-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);    
+}
+.brand-container .brand-img{
+    width: 50px;  
+    margin: auto;
+}
+.brand-container .brand-img:nth-child(1) {
+    width: 45px;
+}
+.brand-container .brand-img:nth-child(4) {
+    width: 70px;
+}
+.brand-container .brand-img:nth-child(5) {
+    width: 64px;
+}
+/* ...................End Brand Section.................... */
+
+
+/* ...................Start Services Section.................... */
+#Services{
+    background: var(--color-bg2);
+    padding: 100px 0;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 90px;
+}
+.services-container h1{
+    color: var(--color-primary);
+}
+.services-contents{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
+    gap: 15px;
+}
+.services-content{
+    background: var(--color-light);
+    padding: 140px 40px 40px;
+    color: var(--color-bg1); 
+    transition: var(--transition);  
+}
+.services-content span i{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.services-content:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+.services-content:nth-child(1){
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+/* ...................End Services Section.................... */
+
+
+/* ...................Start Testimonials Section.................... */
+#Testimonials{
+    background: var(--color-bg1);
+    padding: 100px 0;
+}
+.testimonial-container{
+    display: grid;
+    grid-template-columns: 74% 18% !important;
+    gap: 8%;    
+}
+.testimonial-left{
+    width: 100%;
+    overflow: hidden;  
+}
+
+.testimonial-right>div{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.testimoil{  
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 15px;
+    align-items: center;
+    color: var(--color-white); 
+    user-select: none;
+    margin-right: 5px; 
+   
+}
+
+.testimoil span{
+    font-size: 100px;
+    line-height: 120%;
+    font-weight: 700; 
+
+}
+.testimoil p{
+    font-size: 18px;
+    line-height: 160%;  
+}
+/* ...................End Testimonials Section.................... */
+
+
+/* ...................Start Contact Section.................... */
+#Contact{
+    background: var(--color-black);
+    padding: 100px 0;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+.contact-social{
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: start;
+}
+.contact-social li a{
+    color: var(--color-white);
+    font-size: 20px;
+    cursor: pointer;
+    transition:var(--transition);
+}
+.contact-social li a:hover{
+    color: var(--color-primary);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.form-group{
+    display: flex;    
+}
+.form-group input, textarea{
+    font-size: 18px;
+    color: var(--color-white);
+    background: transparent;
+    padding: 0 10px;
+    resize: none;
+}
+form button{
+    background: transparent;
+    padding: 0 !important;
+    transition: var(--transition);   
+    color: var(--color-primary) !important; 
+}
+form button:hover{
+    background: none !important;
+    margin-left: 10px;
+}
+/* ...................End Contact Section.................... */
+
+
+/* ...................Start Footer .................... */
+footer{
+    background: var(--color-black);
+    padding: 30px 0;
+    color: var(--color-light);
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid var(--color-light);
+}
+footer span{
+    color: var(--color-white);
+}
+/* ...................End Footer .................... */
+
+
+/* ...................Start Media Scrin.................... */
+/* Max-Widht:1024px */
+@media (max-width:1024px) {
+    h1{
+        font-size: 70px;
+    } 
+    h2{
+        font-size: 35px;
+    }     
+    h3{
+        font-size: 30px;
+        line-height: 120%;
+    }  
+    h4{
+        font-size: 25px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    /* ...........NavBar........... */
+    nav{
+        height: 80px;
+    }
+    .nav-container h3{       
+        margin-left: 2rem;
+    }
+    .nav-container .btn{
+        display: none;
+    }
+    .nav-container {
+        width: 100% !important;
+        position: relative;
+    }
+    .nav-link{
+        position: absolute;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        right: 0;
+        top: 60px; 
+        display: none;   
+        perspective: 400px;    
+    }
+    .nav-link li{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: NavAni forwards 400ms ease;
+        transform-origin:top right ;
+    }
+    .nav-link li:nth-child(2){
+        animation-delay: 200ms ;
+    }
+    .nav-link li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    
+    @keyframes NavAni {
+        0%{
+            transform: rotateX(90deg);
+        }
+        100%{
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+    .nav-link li a{
+        padding: 3rem 7.7rem;
+        background: var(--color-primary);
+        display: inline-block;
+        box-shadow:  -1rem 1rem 1rem .5rem rgba(0, 0, 0, 0.4);
+        transition: var(--transition);
+    }
+    .nav-link li a:hover{
+        background: var(--color-bg2);
+    }
+    .phone-menu {
+        display: inline-block;
+        background: transparent;
+        font-size: 26px;
+        color: var(--color-white);
+        margin-right: 2rem;
+    }
+    .close{
+        display: none;
+    }
+    /* ............Header.............. */
+     #Home{
+        height: max-content;
+     }  
+     .hero-container{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+    .hero-right{
+        height: max-content;
+        width: 30rem;
+        position: relative;
+        grid-row: 1;
+        margin: auto;
+        margin-top: 180px;
+        border-top-left-radius: 20rem;
+        border-top-right-radius: 20rem;
+        overflow: hidden;
+    }
+    .hero-left{
+        text-align: center;
+    }
+    .hero-left h1{
+        padding-top: 60px;
+    }
+    .hero-action-aria{
+        margin-bottom: 96px;
+        justify-content: center;
+    }
+    /* ............Services.............. */
+    .services-container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .services-left{
+        display: none;
+    }
+    /* ............Testimonial.............. */
+    .testimonial-container{
+        grid-template-columns: 1fr !important;
+    }
+    .testimonial-left{
+        padding-bottom:4rem ;       
+    }
+    .testimonial-right{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        justify-content: space-between;         
+    }
+    /* ............Contact.............. */
+    .contact-container{
+        flex-direction: column;
+        gap: 80px;       
+    }
+}
+/* Max-Widht:600px */
+@media (max-width:600px) {
+    h1{
+        font-size: 54px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    /* ..........Header........... */
+    .hero-right{
+        width: 90%;
+    }
+    .hero-action-aria{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    /* ..........Brand........... */
+    .brand-container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        align-items: center;
+    }
+    .brand-img{
+        width: 40px !important;
+    }
+    .brand-img:nth-child(1){
+        width: 30px !important;
+    }
+    .brand-img:nth-child(4){
+        width: 50px !important;
+    }
+    .brand-img:nth-child(5){
+        width: 50px !important;
+    }
+    /* ..........Services........... */ 
+    .services-contents{
+        grid-template-columns: 1fr;
+    } 
+    /* ..........testmonial........... */ 
+    .testimoil{
+        grid-template-columns: 1fr;
+    
+        background: var(--color-primary);        
+    }   
+    .testimoil p{
+        padding: 2rem;
+        padding-top: 0;
+        background: var(--color-primary);
+    }
+    .testimoil img{
+        width: 8rem;
+        height: 8rem;  
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    .testimoil span{
+        font-size: 40px;    
+    }
+}
+/* ...................End Media Scrin.................... */
